@@ -3,5 +3,5 @@ class Planet < ApplicationRecord
   belongs_to :user
 
   validates :price, :title, :description, presence: true
-  # has_one_attached :photo
+  has_many_attached :photos
 end
