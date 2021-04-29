@@ -1,0 +1,9 @@
+  <div class="col-12">
+      <div class="bg-white rounded p-3">
+        <h4>Add your booking</h4>
+        <%= simple_form_for [@planet, @booking] do |f| %>
+          <%= f.input :check_in_date, placeholder: 'Check in' %>
+          <%= f.submit class: 'btn btn-success' %>
+        <% end %>
+      </div>
+    </div>

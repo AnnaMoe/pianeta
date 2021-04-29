@@ -6,7 +6,9 @@ class PlanetsController < ApplicationController
      @planets = Planet.all
   end
 
-  def show; end
+  def show
+    @booking = Booking.new
+  end
 
   private
   def set_planet
