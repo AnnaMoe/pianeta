@@ -3,7 +3,7 @@ class PlanetsController < ApplicationController
   before_action :set_planet, only: [:show]
 
   def index
-     @planets = Planet.all
+     @planet = Planet.all
   end
 
   def show; end
