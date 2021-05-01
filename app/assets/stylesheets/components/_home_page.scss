@@ -1,18 +1,15 @@
 @import url('https://fonts.googleapis.com/css2?family=KoHo:wght@700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
 
-body {
+body .container_home_page {
     position: relative;
-    width: 1440px;
-    height: 900px;
+    min-width: fit-content;
+    background: linear-gradient(180deg, rgba(143, 39, 187, 0.94) 22.72%, rgba(15, 237, 252, 0.94) 119.28%);
 }
-.container_home_page {
+.container {
     display: block;
     margin-left: auto;
     margin-right: auto;
-    width: 1518px;
-    height: 900px;
-    background: linear-gradient(180deg, rgba(143, 39, 187, 0.94) 22.72%, rgba(15, 237, 252, 0.94) 119.28%);
 }
 .planet_one {
     position: absolute;
@@ -57,7 +54,7 @@ body {
     left: 527px;
     border: 4px solid #FFFFFF;
 }
-#title_home_page{
+h1{
     font-family: 'KoHo', sans-serif;
     font-style: normal;
     font-size: 86px;
