@@ -2,8 +2,6 @@
 @import "alert";
 @import "avatar";
 @import "navbar";
-@import "form";
-
 
 .cards{
     display: flex;
@@ -48,6 +46,7 @@
   margin: 0px;
 }
 
+  
   
 .card-category-planets .card-planets-body {
   padding: 16px;
@@ -97,7 +96,4 @@
       margin-left: 178px;
       margin-top: 155px;
   }
-
-
-
 
