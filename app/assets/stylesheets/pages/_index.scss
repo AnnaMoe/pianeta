@@ -5,3 +5,38 @@
 body {
   background-color: white;
 }
+
+.banner {
+height: 458px;
+padding:10px;
+overflow: hidden;
+background-color:#2A003C;
+}
+
+h1{
+  color: white;
+  top: 66px;
+  font-size: 32px;
+  font-weight: 700;
+  letter-spacing: normal;
+  line-height: 40px;
+  margin: 0 10px 10px;
+  text-align: left;
+  position: relative;
+  top: 135px;
+  bottom: 10px;
+  left: 171px;
+  text-shadow: 0 0 30px #fff, 0 0 5px #B921FA, 0 0 15px #B921FA, 0 0 30px #B921FA;
+}
+
+
+h2{
+  color:black;
+  text-align: left;
+  margin-left: 65px;
+  padding: 20px;
+}
+
+
+
+
