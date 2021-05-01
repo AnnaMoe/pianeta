@@ -9,6 +9,7 @@
   <div class="row">
     <div class="col-12 col-md-6 flex-grow-1">
       <div class="bg-white rounded p-3 shadow">
+
 <div>
 <%= simple_form_for @planet do |f| %>
   <%= f.input :title, label: false, placeholder: 'Name your listing (planet name)'%>
@@ -17,13 +18,11 @@
 
   <%= f.input :price, label: false, placeholder: "Pricing $"  %>
   </div>
-  <%= f.input :title, label: false, placeholder: 'Upload image' %>
+  <%= f.input :photos, as: :file %>
   <button type="button">Browse</button>
 
   <%= f.input :name_of_space_station %>
 
-  <%= f.input :population_density %>
-  <%= f.input :climate %>
 
 </div>
   <select class="drop-down" name="Availablity">
@@ -34,7 +33,8 @@
 </div>
 
 <p>By clicking 'Publish' you are agreeing to our Terms & Conditions, Privacy Policy, and to received booking-related messages.</p>
-<button type="button">Publish</button>
+
+<%= f.button :button, "Publish", class: "button" %>
 
 
 <% end %>
