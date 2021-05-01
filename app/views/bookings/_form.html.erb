@@ -1,9 +1,16 @@
-  <div class="col-12">
-      <div class="bg-white rounded p-3">
-        <h4>Add your booking</h4>
-        <%= simple_form_for [@planet, @booking] do |f| %>
-          <%= f.input :check_in_date, placeholder: 'Check in' %>
-          <%= f.submit class: 'btn btn-success' %>
-        <% end %>
-      </div>
+  
+<div class="container">
+  <div class="row">
+    <div class="card mt-3">
+      <h4><strong>$<%= @planet.price %></strong> /night</h4>
+      <%= simple_form_for [@planet, @booking] do |f| %>
+        <%= f.input :check_in_date, placeholder: 'Check in' %>
+        <%= f.input :check_out_date, placeholder: 'Check out' %>
+        <%= f.input :number_of_guests, placeholder: 'Space Travellers' %>
+        <%# <%= f.submit class: 'btn btn-success' %>
+        <%= f.button :button, "Book now", class: "button w-100" %>
+        <div><%= f.button :button, "Contact Host", class: "w-100" %></div>
+      <% end %>
     </div>
+  </div>
+</div>
