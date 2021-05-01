@@ -1,4 +1,4 @@
-<div class="banner">
+<div class="banner planets">
   <h1>Galaxy Far, Far Away? Quick Trip to Mars?<br>Pianeta has you covered.</h1>
   <div>
   <form>
@@ -28,13 +28,14 @@
 </div>
 <div class= "container-sm"></div>
 <h2>Featured Planets:</h2>
+
     <div class="cards">
 
       <div class="col">
         <div class="card-category-planets" >
-        <img src="https://images.unsplash.com/photo-1560851691-ebb64b584d3d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxfDB8MXxhbGx8fHx8fHx8fHwxNjE5NzA2NDEz&ixlib=rb-1.2.1&q=80&w=1080&utm_source=unsplash_source&utm_medium=referral&utm_campaign=api-credit" alt="Listing Cover Photo">
+        <%= cl_image_tag("zkoh2ddnvj524vpcoww4") %>
           <div class="card-planets-body">
-            <h3 class="card-planet-title"><%= "Planet Name"%></h3>
+            <h3 class="card-planet-title"><%= link_to "Planet Name", planet_path(6)%></h3>
             <h3 class="card-planet-price">$XX</h3>
             <div></div>
             <p class="card-planet-description">Description</p>
@@ -43,7 +44,7 @@
       </div>
       <div class="col">
         <div class="card-category-planets" >
-        <img src="https://images.unsplash.com/photo-1556741495-4a9f3c6935e8?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MXwxfDB8MXxhbGx8fHx8fHx8fA&ixlib=rb-1.2.1&q=80&w=1080&utm_source=unsplash_source&utm_medium=referral&utm_campaign=api-credit" alt="Listing Cover Photo">
+        <%= cl_image_tag("rwbibpbxxszuqforskcu.jpg") %>
           <div class="card-planets-body">
             <h3 class="card-planet-title">Planet Name</h3>
             <h3 class="card-planet-price">$XX</h3>
@@ -53,7 +54,9 @@
       </div>
       <div class="col">
         <div class="card-category-planets" >
-        <img src="https://images.unsplash.com/photo-1567683740738-d1fbf876b70a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxfDB8MXxhbGx8fHx8fHx8fHwxNjE5NzA2OTgz&ixlib=rb-1.2.1&q=80&w=1080&utm_source=unsplash_source&utm_medium=referral&utm_campaign=api-credit" alt="Listing Cover Photo">
+
+        <%= cl_image_tag("agyy55i31hpsqwmkb775") %>
+
           <div class="card-planets-body">
             <h3 class="card-planet-title">Planet Name</h3>
             <h3 class="card-planet-price">$XX</h3>
