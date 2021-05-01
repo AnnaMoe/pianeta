@@ -5,12 +5,14 @@ body {
     position: relative;
     width: 1440px;
     height: 900px;
-    background: linear-gradient(180deg, rgba(143, 39, 187, 0.94) 22.72%, rgba(15, 237, 252, 0.94) 119.28%);
 }
-.container {
+.container_home_page {
     display: block;
     margin-left: auto;
     margin-right: auto;
+    width: 1518px;
+    height: 900px;
+    background: linear-gradient(180deg, rgba(143, 39, 187, 0.94) 22.72%, rgba(15, 237, 252, 0.94) 119.28%);
 }
 .planet_one {
     position: absolute;
@@ -55,7 +57,7 @@ body {
     left: 527px;
     border: 4px solid #FFFFFF;
 }
-h1{
+#title_home_page{
     font-family: 'KoHo', sans-serif;
     font-style: normal;
     font-size: 86px;
