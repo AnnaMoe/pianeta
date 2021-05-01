@@ -1,0 +1,110 @@
+@import url('https://fonts.googleapis.com/css2?family=KoHo:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+
+body {
+    position: relative;
+    width: 1440px;
+    height: 900px;
+    background: linear-gradient(180deg, rgba(143, 39, 187, 0.94) 22.72%, rgba(15, 237, 252, 0.94) 119.28%);
+}
+.container {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+.planet_one {
+    position: absolute;
+    left: 9.38%;
+    right: 75.07%;
+    top: 21.33%;
+    bottom: 53.78%;
+    background: linear-gradient(0deg, #FFCA40 0%, #961919 100%);
+    /*animation: planet_one 2.5s infinite;
+    transition: all 0.5s linear;*/
+    height: 224px;
+    width: 224px;
+    left: 135px;
+    top: 192px;
+    border-radius: 100%;
+}
+#canvas-basic {
+    position: absolute;
+    display: block;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+}
+/*@keyframes planet_one {
+    0% {background: linear-gradient(0deg, #fcba03 0%, #1e8bf1 100%);}
+    25%{background: linear-gradient(0deg, #8566cf 0%, #fd891d 100%);}
+    50%{background: linear-gradient(0deg, #d79129 0%, #f8e962 100%);}
+    75%{background: linear-gradient(0deg, #e95873 0%, #1de7b5 100%);}
+    100% {background: linear-gradient(0deg, #5abf9a 0%, #f35656 100%);}
+  }*/
+.card-white{
+    height: 112px;
+    width: 357px;
+    left: 541px;
+    top: 360px;
+    position: absolute;
+}
+.white-line{
+    left: 527px;
+    border: 4px solid #FFFFFF;
+}
+h1{
+    font-family: 'KoHo', sans-serif;
+    font-style: normal;
+    font-size: 86px;
+    line-height: 112px;
+    text-transform: uppercase;
+    color:#FFFFFF;
+}
+p{
+    margin-top:15px;
+    height: 42px;
+    left: 476px;
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 21px;
+    text-align: center;
+    color: #FFFFFF;
+}
+.btn-blue{
+    width: 140px;
+    height: 44px;
+    left: 650px;
+    top: 610px;
+    background: #2A003C;
+    padding: 6px;
+    border-radius: 10px;
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 21px;
+    text-align: center;
+    color: #FFFFFF;
+}
+.btn-blue:hover{
+    text-decoration: none;
+    color: #FFFFFF;
+}
+.planet_two {
+    position: absolute;
+    left: 77.22%;
+    right: 10.44%;
+    top: 60.11%;
+    bottom: 20.14%;
+    background: linear-gradient(46.57deg, #0DB899 45.08%, #311996 111.67%);
+    width: 177.72px;
+    height: 177.72px;
+    top: 541px;
+    left: 1112px;
+    border-radius: 100%;
+}
