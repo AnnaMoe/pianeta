@@ -8,6 +8,10 @@ class PlanetsController < ApplicationController
 
   def show; end
 
+  def new
+    @planet = Planet.new
+  end
+
   private
   def set_planet
     @planet = Planet.find(params[:id])
