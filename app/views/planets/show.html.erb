@@ -1,32 +1,45 @@
 <div class="m-5">
   <div class="pictures d-flex justify-content-between">
-    <div class="cover-picture"></div>
+    <div><%= cl_image_tag("vyec3bstcglbkdovu9bq",
+      class: "cover-picture") %></div>
     <div class="d-flex-column">
-      <p class="middle-picture"></p>
-      <p class="middle-picture"></p>
+      <p><%= cl_image_tag("oioedmdm4itsccdmasip",
+      class: "middle-picture") %></p>
+      <p><%= cl_image_tag("zkoh2ddnvj524vpcoww4",
+      class: "middle-picture") %></p>
     </div>
-     <div class="d-flex-column">
-      <p class="outer-picture"></p>
-      <p class="outer-picture"></p>
+    <div class="d-flex-column">
+      <p><%= cl_image_tag("pjgz89hkowv5p3g1nrkg",
+      class: "outer-picture") %></p>
+      <p><%= cl_image_tag("xsbma6usy4k1h0da1iyv",
+      class: "outer-picture") %></p>
     </div>
   </div>
-  <div class="header mt-3">
-    <div class="header-content">
-    <b><h3><%= @planet.title %></h3></b>
-    <p><i class="fab fa-reddit-alien"></i> Name of Inhabitants   <i class="fas fa-rocket ml-3"></i> Name of Space Station</p>
+  <div class="container">
+    <div class="row d-flex">
+      <div class="col-md-8 flex-grow-1">
+        <div class="header mt-3">
+          <div class="header-content">
+            <b>
+              <h3><%= @planet.title %></h3>
+            </b>
+            <p><i class="fab fa-reddit-alien"></i> Name of Inhabitants <i class="fas fa-rocket ml-3"></i> Name of Space Station</p>
+            <p><i class="fas fa-star"></i> Name of Galaxy</p>
+          </div>
+          <div class="header-avatar">
+            <%= cl_image_tag("wxaoh8vb1ekhhuhkkwbd", class: "avatar") %>
+            <p> <small><em class="text-muted">Hosted by <br>
+                  Host Name</em></small></p>
+          </div>
+        </div>
+        <hr>
+        <p>Description:</p>
+        <p><%= @planet.description %></p>
+      </div>
+       <div class="col-md-4">
+      <%= render "bookings/form", booking: @booking %>
+    </div>
+    </div>
     
-      <p><i class="fas fa-star"></i> Name of Galaxy</p>
-    </div>
-    <div class="header-avatar">
-      <%= cl_image_tag("wxaoh8vb1ekhhuhkkwbd", class: "avatar") %>  
-      <p> <small><em class="text-muted">Hosted by <br> Host Name</em></small></p>
-     
-    </div>
+   
   </div>
-  
-    <hr>
-    <p><%= @planet.price%>$<i class="fa fa-pencil"></i> </p>
-    <p><%= @planet.description %></p> 
-</div>
-
-

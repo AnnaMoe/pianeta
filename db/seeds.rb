@@ -17,7 +17,7 @@ test_user = User.create(id: 1, email: "anna@planet.de", password: "foobar")
     user: test_user,
     price: rand(100..500),
     title: Faker::Space.planet,
-    description: Faker::TvShows::BigBangTheory.quote
+    description: Faker::Lorem.paragraphs
   )
 end
 
