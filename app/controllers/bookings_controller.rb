@@ -24,6 +24,7 @@ class BookingsController < ApplicationController
   def update
     @booking =Booking.find(params[:id])
     @booking.update(booking_params)
+    @booking.save
       redirect_to planet_booking_path(@booking.planet, @booking)
   end
 
@@ -33,6 +34,6 @@ class BookingsController < ApplicationController
 
   private
   def booking_params
-    params.require(:booking).permit(:check_in_date, :check_out_date, :price, :location, :number_of_guests)
+    params.require(:booking).permit(:check_in_date, :check_out_date, :price, :location, :number_of_guests, :first_name)
   end
 end
