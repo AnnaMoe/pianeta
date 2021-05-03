@@ -26,9 +26,17 @@ body {
     top: 192px;
     border-radius: 100%;
     box-shadow: 0 0 30px #FFCA40, 0 0 5px #fff, 0 0 15px#FFCA40, 0 0 30px #fff;
+    animation: flyin 1.5s;
 
 }
 
+@keyframes flyin {
+    to { 
+      filter: blur(0);
+      transform: scale(1);
+      opacity: 1;
+    }
+ }
 
 .card-white{
     height: 112px;
@@ -42,7 +50,7 @@ body {
     border: 4px dashed #FFFFFF;
 }
 
-#title_home_page{
+.title_home_page{
     font-family: 'KoHo', sans-serif;
     font-style: normal;
     font-size: 86px;
@@ -101,6 +109,16 @@ p.homepage {
     left: 1112px;
     border-radius: 100%;
     box-shadow: 0 0 30px #0DB899, 0 0 5px #fff, 0 0 15px#0DB899, 0 0 30px #fff;
+     animation: flyin .2s;
 }
 
 
+.newly-added {
+    animation: flyin 2s ease forwards;
+    opacity: 0;
+    transform: scale(2);
+}
+
+  
+ 
+  
