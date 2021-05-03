@@ -1,27 +1,22 @@
-<div class="container mt-5">
+<div class="container mt-5 confirmation">
   <div class="row">
     <div class="col-12 col-md-6 offset-md-3 card-confirmation">
-      <h1 class="booking-h1">Great <strong><%= @booking.first_name %></strong>,</h1>
-      <h1 class="booking-h1">Your booking has been confirmed</h1>
-    
-    
+      <h2 class="booking-h1">Great <strong><%= @booking.first_name %></strong>,</h2>
+      <h2 class="booking-h1">Your booking has been confirmed</h2>
       <p>You will receive a confirmation email soon with your booking details.</p>
       <div class="container">
         <div class="row d-flex justify-content-between">
           <div>
-          <p><i class="fas fa-globe-africa"></i>  <%= @booking.planet.title %></p>
-          <br>
+            <p><i class="fas fa-globe-africa"></i>  <%= @booking.planet.title %></p>
+            <br>
             <i class="fas fa-user-friends"></i> <%= @booking.number_of_guests %>
           </div>
           <div>
-            <i class="far fa-calendar-alt"></i> <%= @booking.check_in_date %> - <%= @booking.check_out_date %>
+            <i class="far fa-calendar-alt"></i> <%= @booking.check_in_date.strftime('%m/%d/%Y')%> - <%= @booking.check_out_date.strftime('%m/%d/%Y') %>
           </div>
         </div>
         <a class="button m-5" href="#">View Booking</a>
       </div>
-      </div>
-  
+    </div>
   </div>
-
-  
 </div>

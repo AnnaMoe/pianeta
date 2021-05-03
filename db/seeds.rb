@@ -3,6 +3,7 @@ require 'open-uri'
 require 'json'
 
 puts "cleaning database..."
+Booking.destroy_all
 Planet.destroy_all
 User.destroy_all
 puts "database is clean"
@@ -16,7 +17,8 @@ test_user = User.create(id: 1, email: "anna@planet.de", password: "foobar")
   Planet.create(
     user: test_user,
     price: rand(100..500),
-    title: Faker::Space.planet,
+    title: Faker::Movies::StarWars.planet,
+    host_name: Faker::TvShows::Stargate.character,
     description: Faker::Lorem.paragraphs
   )
 end
