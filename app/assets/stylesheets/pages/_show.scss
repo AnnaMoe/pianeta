@@ -77,11 +77,11 @@
 }
 
 .fas {
-  color: #2A003C;
+  color: #35004b;
 }
 
 .fab {
-  color: #2A003C;
+  color: #35004b;
 }
 
 .button {
@@ -98,6 +98,19 @@
       color: white;
   }
 
+  .button-white:hover {
+      background: white;
+      color: black;
+  }
+
+  .confirmation .button {
+    position: relative;
+    left: 285px;
+  }
+
+
+
 .gallery{
   display: grid;
 }
+
