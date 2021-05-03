@@ -1,9 +1,10 @@
 // Import page-specific CSS files here.
 @import "home";
-@import "show";
+// @import "show";
 
 body {
   background-color: white;
+  padding-bottom: 10px;
 }
 
 .banner {
