@@ -1,19 +1,19 @@
 <div class="m-5">
-  <div class="pictures d-flex justify-content-between">
+  <div class="pictures d-flex align-center">
     <div><%= cl_image_tag("vyec3bstcglbkdovu9bq",
       class: "cover-picture") %></div>
-    <div class="d-flex-column">
-      <p><%= cl_image_tag("oioedmdm4itsccdmasip",
-      class: "middle-picture") %></p>
-      <p><%= cl_image_tag("zkoh2ddnvj524vpcoww4",
-      class: "middle-picture") %></p>
-    </div>
-    <div class="d-flex-column">
-      <p><%= cl_image_tag("pjgz89hkowv5p3g1nrkg",
-      class: "outer-picture") %></p>
-      <p><%= cl_image_tag("xsbma6usy4k1h0da1iyv",
-      class: "outer-picture") %></p>
-    </div>
+  <div class="gallery">
+  <%= cl_image_tag("oioedmdm4itsccdmasip",
+      class: "top-middle-picture") %>
+      <%= cl_image_tag("zkoh2ddnvj524vpcoww4",
+      class: "bottom-middle-picture") %>
+      </div>
+      <div class="gallery">
+       <%= cl_image_tag("pjgz89hkowv5p3g1nrkg",
+      class: "top-outer-picture") %>
+      <%= cl_image_tag("xsbma6usy4k1h0da1iyv",
+      class: "bottom-outer-picture") %>
+  </div>
   </div>
   <div class="container">
     <div class="row d-flex">

@@ -57,8 +57,9 @@ body {
     line-height: 112px;
     text-transform: uppercase;
     color:transparent;
-    -webkit-text-stroke: 1px white;
+    -webkit-text-stroke: 3px white;
     text-shadow:  0 0 30px #fff,
+    
 }
 p.homepage {
     margin-top:15px;
@@ -66,7 +67,7 @@ p.homepage {
     left: 476px;
     font-family: 'Roboto', sans-serif;
     font-style: normal;
-    font-weight: bold;
+    font-weight: normal;
     font-size: 18px;
     line-height: 21px;
     text-align: center;
@@ -82,7 +83,7 @@ p.homepage {
     border-radius: 10px;
     font-family: 'Roboto', sans-serif;
     font-style: normal;
-    font-weight: bold;
+    font-weight: normal;
     font-size: 18px;
     line-height: 21px;
     text-align: center;
