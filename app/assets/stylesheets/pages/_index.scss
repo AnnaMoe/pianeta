@@ -3,14 +3,15 @@
 @import "show";
 
 body {
-  background-color: rgb(249, 249, 249);
+  background-color: white;
+  padding-bottom: 10px;
 }
 
 .banner {
 height: 458px;
 padding:10px;
 overflow: hidden;
-background-color:#2A003C;
+background: linear-gradient(180deg, rgba(143, 39, 187, 0.94) 22.72%, rgba(42, 0, 60, 0.94) 99.28%);
 }
 
 .glow-header{
