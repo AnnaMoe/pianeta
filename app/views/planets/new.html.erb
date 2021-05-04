@@ -1,11 +1,8 @@
-<div class="topnav">
-  <a class="active" href="#home">Pianeta</a>
-</div>
-
-<h1>List your property</h1>
-
-
 <div class="container py-5">
+<h1 class="mb-3">List your property</h1>
+
+
+
   <div class="row">
     <div class="col-12 col-md-6 flex-grow-1">
       <div class="bg-white rounded p-3 shadow">
@@ -18,19 +15,19 @@
 
   <%= f.input :price, label: false, placeholder: "Pricing $"  %>
   </div>
-  <%= f.input :photos, as: :file %>
-  <button type="button">Browse</button>
+  <%= f.input :photos, as: :file, input_html: { multiple: true }, hint: "Please upload at least 4 photos" %>
+  
 
   <%= f.input :name_of_space_station %>
 
 
-</div>
+<%# </div>
   <select class="drop-down" name="Availablity">
-  <option value="Availablity">Availablity</option>
-    ...
-  <option value="Dates">Insert dates</option>
+  <%# <option value="Availablity">Availablity</option> %>
+  
+  <%# <option value="Dates">Insert dates</option>
 </select>
-</div>
+</div> %> 
 
 <p>By clicking 'Publish' you are agreeing to our Terms & Conditions, Privacy Policy, and to received booking-related messages.</p>
 

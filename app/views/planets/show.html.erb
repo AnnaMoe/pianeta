@@ -1,19 +1,38 @@
 <div class="m-5">
   <div class="pictures d-flex align-center">
-    <div><%= cl_image_tag("vyec3bstcglbkdovu9bq",
-      class: "cover-picture") %></div>
-  <div class="gallery">
-  <%= cl_image_tag("oioedmdm4itsccdmasip",
-      class: "top-middle-picture") %>
-      <%= cl_image_tag("zkoh2ddnvj524vpcoww4",
-      class: "bottom-middle-picture") %>
+    <% if @planet.photos.attached? %>
+
+     
+      <%# <%= cl_image_tag @planet.photos.first, class: "cover-picture" %>
+      <%# <%= cl_image_tag @planet.photos.second, class: "top-middle-picture" %> 
+      <%# <%= cl_image_tag @planet.photos.third, class: "bottom-middle-picture" %> 
+      <%# <%= cl_image_tag @planet.photos.fourth, class: "top-outer-picture" %> 
+      <%# <%= cl_image_tag @planet.photos.last, class: "bottom-outer-picture" %> 
+    <div class="row">
+      <% @planet.photos.each do |photo| %>
+         
+          <%= cl_image_tag photo.key, class: "upload-picture"  %>
+            <% end %>
+          
+    </div>  
+     
+     
+    <% else %>
+      <div><%= cl_image_tag("vyec3bstcglbkdovu9bq",
+        class: "cover-picture") %></div>
+      <div class="gallery">
+        <%= cl_image_tag("oioedmdm4itsccdmasip",
+        class: "top-middle-picture") %>
+        <%= cl_image_tag("zkoh2ddnvj524vpcoww4",
+        class: "bottom-middle-picture") %>
       </div>
       <div class="gallery">
-       <%= cl_image_tag("pjgz89hkowv5p3g1nrkg",
-      class: "top-outer-picture") %>
-      <%= cl_image_tag("xsbma6usy4k1h0da1iyv",
-      class: "bottom-outer-picture") %>
-  </div>
+        <%= cl_image_tag("pjgz89hkowv5p3g1nrkg",
+        class: "top-outer-picture") %>
+        <%= cl_image_tag("xsbma6usy4k1h0da1iyv",
+        class: "bottom-outer-picture") %>
+      </div>
+    <% end %>
   </div>
   <div class="container">
     <div class="row d-flex mt-4">
@@ -36,9 +55,6 @@
         <p>Description:</p>
         <p><%= @planet.description %></p>
       </div>
-       <div class="col-md-4">
-      <%= render "bookings/form", booking: @booking %>
-    </div>
-
-
-
+      <div class="col-md-4">
+        <%= render "bookings/form", booking: @booking %>
+      </div>

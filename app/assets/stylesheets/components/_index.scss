@@ -15,7 +15,7 @@
     gap: 80px;
     width: 500px;
     justify-content: space-between;
-    justify-content: center;
+    
     }
 
 
@@ -27,6 +27,12 @@
   height: 300px;
   padding-bottom: 20px;
   margin-bottom: 40px;
+
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .card-category-planets > img {

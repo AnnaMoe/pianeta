@@ -4,7 +4,7 @@
       <span><strong>$<%= @planet.price %></strong> /night</span>
       <%= simple_form_for [@planet, @booking] do |f| %>
         <%= f.input :price, as: :hidden, input_html: {value: @planet.price } %>
-        <%= f.input :check_in_date, as: :string, label: false, placeholder: 'Check in', input_html: {class: "datepicker", :onchange => "handleBookingFormChange(event)"} %>
+        <%= f.input :check_in_date, as: :string, label: false, placeholder: 'Check in',  input_html: {class: "datepicker", :onchange => "handleBookingFormChange(event)"}  %>
         <%= f.input :check_out_date, as: :string, label: false, placeholder: 'Check out', input_html: {class: "datepicker", :onchange => "handleBookingFormChange(event)"} %>
         <%= f.input :number_of_guests, label: false, placeholder: 'Space Travellers', class: "w-100", input_html: {:onchange => "handleBookingFormChange(event)"} %>
         <div class="d-flex justify-content-between">

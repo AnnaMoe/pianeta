@@ -1,49 +1,55 @@
-
 <div class="planets">
   <div class="banner">
-  <h1 class="glow-header">Galaxy Far, Far Away? Quick Trip to Mars?<br>Pianeta has you covered.</h1>
-  <div>
-  <form>
-  <div class="inner-form">
-  <div class="row">
-    <div class="col">
-      <input type="text" class="form-control" placeholder= "Where to?">
+    <h1 class="glow-header">Galaxy Far, Far Away? Quick Trip to Mars?<br>
+      Pianeta has you covered.</h1>
+    <div>
+      <form>
+        <div class="inner-form">
+          <div class="row">
+            <div class="col">
+              <input type="text" class="form-control" placeholder= "Where to?">
+            </div>
+            <div class="col">
+              <input type="text" class="form-control" placeholder="Check-in">
+            </div>
+            <div class="col">
+              <input type="text" class="form-control" placeholder="Check-out">
+            </div>
+            <div class="col">
+              <input type="text" class="form-control" placeholder="Space Travellers">
+            </div>
+          </div>
+        </form>
+      </div>
     </div>
-    <div class="col">
-      <input type="text" class="form-control" placeholder="Check-in">
-    </div>
-    <div class="col">
-      <input type="text" class="form-control" placeholder="Check-out">
-    </div>
-    <div class="col">
-      <input type="text" class="form-control" placeholder="Space Travellers">
-    </div>
-    </div>
-  </form>
-  </div>
-  </div>
   </div>
   <div class= "container-sm"></div>
   <h2>Featured Planets:</h2>
-
-      <div class="cards">
-
-
-      <div class="col">
-        <div class="card-category-planets" >
-        <%= cl_image_tag("zkoh2ddnvj524vpcoww4") %>
-          <div class="card-planets-body">
-            <h3 class="card-planet-title"><%= link_to "Planet Name", planet_path(6)%></h3>
-            <h3 class="card-planet-price"></h3>
-            <div></div>
-            <p class="card-planet-description">Description</p>
+ 
+ 
+    <div class="row">
+      <% @planets.each do |planet| %>
+        
+        <%# <div class="col-12 col-sm-6 col-md-4 my-3"> %>
+        <div class="cards">
+          <%= link_to planet_path(planet), class:'text-decoration-none'  do %>
+            <div class="card-category-planets" >
+              <%= cl_image_tag("zkoh2ddnvj524vpcoww4") %>
+              <div class="card-planets-body">
+                <h3 class="card-planet-title"><%= planet.title %></h3>
+                
+                <p class="card-planet-description"><%=planet.price%>$</p>
+              </div>
             </div>
-
+          <% end %>
         </div>
-        <div class="col">
+      <% end %>
+    </div>
+  </div>
+  <%# <div class="col">
           <div class="card-category-planets" >
           <%= cl_image_tag("rwbibpbxxszuqforskcu.jpg") %>
-            <div class="card-planets-body">
+  <%# <div class="card-planets-body">
               <h3 class="card-planet-title">Planet Name</h3>
               <h3 class="card-planet-price">$XX</h3>
               <p class="card-planet-description">Description</p>
@@ -54,8 +60,7 @@
           <div class="card-category-planets" >
 
           <%= cl_image_tag("agyy55i31hpsqwmkb775") %>
-
-
+  <%# 
           <div class="card-planets-body">
             <h3 class="card-planet-title">Planet Name</h3>
             <h3 class="card-planet-price">$XX</h3>
@@ -64,5 +69,4 @@
             
         </div>
       </div>
-      </div>
-</div>
+      </div> %>
