@@ -3,15 +3,49 @@
     <div class="col-12 col-md-6 offset-md-3">
       <div class="bg-white rounded p-3 shadow">
         <h3>Complete your booking</h3>
-        <%= simple_form_for [@booking.planet, @booking] do |f| %>
-          <%= f.input :first_name %>
-          <%= f.input :last_name %>
-          <%= f.input :email %>
-          <%= f.input :phone_number %>
-          <%= f.input :credit_card %>
-          <%= f.button :button, "Confirm", class: "button" %>
-        <% end %>
+        <form>
+  <div class="form-row">
+    <div class="form-group col-md-6">
+      <label for="inputFirstName"></label>
+      <input type="text" class="form-control" id="inputFirstName" placeholder="First Name">
+    </div>
+    <div class="form-group col-md-6">
+      <label for="inputLastName"></label>
+      <input type="text" class="form-control" id="inputLastName" placeholder="Last Name">
+    </div>
+  </div>
+  <div class="form-row">
+    <div class="form-group col-md-6">
+      <label for="inputEmail"></label>
+      <input type="text" class="form-control" id="inputEmail" placeholder="Email Address">
+    </div>
+    <div class="form-group col-md-6">
+      <label for="inputPhone"></label>
+      <input type="text" class="form-control" id="inputPhone" placeholder="Phone Number">
+    </div>
+  </div>
+  <div class="form-row">
+    <div class="form-group col-lg-9">
+      <label for="inputPayment"></label>
+      <input type="text" class="form-control" id="inputPayment" placeholder="Credit Card">
+    </div>
+    <div class="form-group col-md-3">
+      <label for="inputExpiration"></label>
+      <input type="text" class="form-control" id="inputExpiration" placeholder="MM/YY">
+    </div>
+  </div>
+  <div class="form-group">
+    <label for="inputMessage">Message Your Host (optional)</label>
+    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" placeholder="Give a brief description of yourself, who you are travelling with, or any special requests you may have."></textarea>
+  </div>
+  <p>By clicking 'Confirm' you are agreeing to our Terms & Conditions, Privacy Policy, and to received booking-related messages.</p>
+  <button type="submit" class="button w-100 mt-2">Confirm</button>
+  
+
+</form>
       </div>
     </div>
   </div>
 </div>
+
+
