@@ -1,0 +1,13 @@
+ <%= simple_form_for [@booking.planet, @booking] do |f| %>
+          <div class = "input-group">
+            <%= f.input :first_name %>
+            <%= f.input :last_name %>
+          </div>
+          <div class ="input-group">
+            <%= f.input :email %>
+            <%= f.input :phone_number %>
+          </div>
+          <%= f.input :credit_card  %>
+          <%= f.input :message, label: "Message your Host (optional)", placeholder: "Give a brief description about yourself.", rows: 20  %>
+          <%= f.button :button, "Confirm", class: "button" %>
+        <% end %>
