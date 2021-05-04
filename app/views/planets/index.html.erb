@@ -1,6 +1,6 @@
-
 <div class="planets">
   <div class="banner">
+
   <h1 class="glow-header">Galaxy Far, Far Away? Quick Trip to Mars?<br>Pianeta has you covered.</h1>
   <div>
   <form>
@@ -23,65 +23,32 @@
       <i class="fas fa-search"></i> Search
     </button>
     </div>
+
     </div>
-  </form>
-  </div>
-  </div>
   </div>
   <div class= "container-sm"></div>
   <h2>Featured Planets:</h2>
 
-  <div class="cards">
-    <div class="col">
-          <div class="card-category-planets" >
-          <%= cl_image_tag("zkoh2ddnvj524vpcoww4") %>
-            <div class="card-planets-body">
-              <h3 class="card-planet-title"><%= link_to "Planet Name", planet_path(6)%></h3>
-              <h3 class="card-planet-price">$XX</h3>
-              <div></div>
-              <p class="card-planet-description">Description</p>
+ 
+ 
+    <div class="row">
+      <% @planets.each do |planet| %>
+        
+        <%# <div class="col-12 col-sm-6 col-md-4 my-3"> %>
+        <div class="cards">
+          <%= link_to planet_path(planet), class:'text-decoration-none'  do %>
+            <div class="card-category-planets" >
+              <%= cl_image_tag("zkoh2ddnvj524vpcoww4") %>
+              <div class="card-planets-body">
+                <h3 class="card-planet-title"><%= planet.title %></h3>
+                
+                <p class="card-planet-description"><%=planet.price%>$</p>
               </div>
             </div>
-          </div>
-           <div class="col">
-          <div class="card-category-planets" >
-          <%= cl_image_tag("rwbibpbxxszuqforskcu.jpg") %>
-            <div class="card-planets-body">
-              <h3 class="card-planet-title"><%= link_to "Planet Name", planet_path(6)%></h3>
-              <h3 class="card-planet-price">$XX</h3>
-              <div></div>
-              <p class="card-planet-description">Description</p>
-              </div>
-            </div>
-          </div>
-           <div class="col">
-          <div class="card-category-planets" >
-          <%= cl_image_tag("agyy55i31hpsqwmkb775") %>
-            <div class="card-planets-body">
-              <h3 class="card-planet-title"><%= link_to "Planet Name", planet_path(6)%></h3>
-              <h3 class="card-planet-price">$XX</h3>
-              <div></div>
-              <p class="card-planet-description">Description</p>
-              </div>
-            </div>
-
-          </div>
-
-          
-
-            
+          <% end %>
         </div>
-      </div>
-      </div>
-</div>
-      <div class="footer">
-  <div class="footer-links">
-    <a href="#"><i class="fab fa-instagram"></i></a>
-    <a href="#"><i class="fab fa-facebook"></i></a>
-    <a href="#"><i class="fab fa-twitter"></i></a>
+      <% end %>
+    </div>
   </div>
-  <div class="footer-copyright">
-    © Pianeta, Inc.
-  </div>
-</div>
+ 
 

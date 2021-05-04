@@ -11,7 +11,10 @@
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
       <% if user_signed_in? %>
-        <button class="btn-outline-primary shadow-none focus-none" type="button">List Your Planet</button>
+        <button class="btn-outline-primary shadow-none focus-none" type="button"><%= link_to "List your planet", new_planet_path, class: "btn-outline-primary shadow-none focus-none text-decoration-none", type: "button" %></button>
+        <button class="btn-outline-primary shadow-none focus-none" type="button"><%= link_to "My lists", planets_path, class: "btn-outline-primary shadow-none focus-none text-decoration-none p-3", type: "button" %></button>
+
+
         <li class="nav-item dropdown">
           <%= image_tag "https://images.unsplash.com/photo-1601814933824-fd0b574dd592?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MXwxfDB8MXxhbGx8fHx8fHx8fA&ixlib=rb-1.2.1&q=80&w=1080&utm_source=unsplash_source&utm_medium=referral&utm_campaign=api-credit", class: "avatar dropdown-toggle", id: "navbarDropdown", data: { toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
           <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
