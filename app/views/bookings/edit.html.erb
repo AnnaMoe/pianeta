@@ -4,35 +4,35 @@
       <div class="bg-white rounded p-3 shadow">
         <h3>Complete your booking</h3>
 
-        <form>
+ <%= simple_form_for [@booking.planet, @booking] do |f| %>
   <div class="form-row">
     <div class="form-group col-md-6">
-      <label for="inputFirstName"></label>
-      <input type="text" class="form-control" id="inputFirstName" placeholder="First Name">
+    <label for="inputLastName"></label>
+      <%= f.input :email, placeholder: 'First Name', label:false %>
     </div>
     <div class="form-group col-md-6">
       <label for="inputLastName"></label>
-      <input type="text" class="form-control" id="inputLastName" placeholder="Last Name">
+      <%= f.input :last_name, placeholder: 'Last Name', label:false %>
     </div>
   </div>
   <div class="form-row">
     <div class="form-group col-md-6">
       <label for="inputEmail"></label>
-      <input type="text" class="form-control" id="inputEmail" placeholder="Email Address">
+      <%= f.input :email, placeholder: 'Email Address', label:false %>
     </div>
     <div class="form-group col-md-6">
       <label for="inputPhone"></label>
-      <input type="text" class="form-control" id="inputPhone" placeholder="Phone Number">
+      <%= f.input :phone_number, placeholder: 'Phone Number', label:false %>
     </div>
   </div>
   <div class="form-row">
     <div class="form-group col-lg-9">
       <label for="inputPayment"></label>
-      <input type="text" class="form-control" id="inputPayment" placeholder="Credit Card">
+      <%= f.input :credit_card, placeholder: 'Credit Card', label:false %>
     </div>
     <div class="form-group col-md-3">
       <label for="inputExpiration"></label>
-      <input type="text" class="form-control" id="inputExpiration" placeholder="MM/YY">
+      <%= f.input :credit_card, placeholder: 'MM/YY', label:false %>
     </div>
   </div>
   <div class="form-group">
@@ -40,13 +40,9 @@
     <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" placeholder="Give a brief description of yourself, who you are travelling with, or any special requests you may have."></textarea>
   </div>
   <p>By clicking 'Confirm' you are agreeing to our Terms & Conditions, Privacy Policy, and to received booking-related messages.</p>
-  <button type="submit" class="button w-100 mt-2">Confirm</button>
-  
-
-</form>
-
+  <%= f.button :button, "Confirm", class: "button" %>
+  <% end %>
       </div>
     </div>
   </div>
 </div>
-
