@@ -8,13 +8,12 @@ body {
 }
 
 .banner {
-height: 458px;
-padding:10px;
-overflow: hidden;
-background: linear-gradient(180deg, rgba(143, 39, 187, 0.94) 22.72%, rgba(15, 237, 252, 0.94) 119.28%);
+  padding: 10px;
+  overflow: hidden;
+  background: linear-gradient(180deg, rgba(143, 39, 187, 0.94) 22.72%, rgba(15, 237, 252, 0.94) 119.28%);
 }
 
-.glow-header{
+.glow-header {
   color: white;
   top: 66px;
   font-size: 32px;
@@ -27,20 +26,16 @@ background: linear-gradient(180deg, rgba(143, 39, 187, 0.94) 22.72%, rgba(15, 23
   top: 135px;
   bottom: 10px;
   left: 171px;
-  text-shadow: 0 0 30px #fff, 0 0 5px #B921FA, 0 0 15px #B921FA, 0 0 30px #B921FA;
+  text-shadow: 0 0 30px #fff, 0 0 5px #b921fa, 0 0 15px #b921fa, 0 0 30px #b921fa;
 }
 
-
-.planets h2{
-  color:black;
+.planets h2 {
+  color: black;
   text-align: left;
   margin-left: 65px;
   padding: 20px;
 }
 
-.fa-search{
+.fa-search {
   color: #fff;
 }
-
-
-
