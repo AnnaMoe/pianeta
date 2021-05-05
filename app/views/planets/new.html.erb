@@ -6,10 +6,13 @@
         <h1>List your property</h1>
         
           <%= simple_form_for @planet do |f| %>
-            <%= f.input :title, label: false, placeholder: 'Name your listing (planet name)'%>
-            <%= f.input :name_of_inhabitants, label: false, placeholder: 'Host name (filled from profile)' %>
+            <%= f.input :title, label: false, placeholder: 'Planet name'%>
+            <%= f.input :host_name, label: false, placeholder: 'Host name' %>
             
           
+          <%= f.input :name_of_inhabitants, label: false, placeholder: "name of inhabitants"  %>
+          <%= f.input :name_of_space_station, label: false, placeholder: "name of space station"  %>
+          <%= f.input :name_of_galaxy, label: false, placeholder: "name of galaxy"  %>
           <%= f.input :price, label: false, placeholder: "Pricing $"  %>
           <%= f.input :description, placeholder: "Accomodation, activites, atmosphere, climate etc.", class: "pt-8"  %>
           
