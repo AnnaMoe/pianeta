@@ -1,45 +1,28 @@
 <div class="container py-5">
-<h1 class="mb-3">List your property</h1>
-
-
-
+  
   <div class="row">
-    <div class="col-12 col-md-6 flex-grow-1">
+    <div class="col-12 col-md-6">
       <div class="bg-white rounded p-3 shadow">
-<h1>List your property</h1>
-<div>
-    <%= simple_form_for @planet do |f| %>
-      <%= f.input :title, label: false, placeholder: 'Name your listing (planet name)'%>
-      <%= f.input :name_of_inhabitants, label: false, placeholder: 'Host name (filled from profile)' %>
-        <div class = "input-group", pt-8>
-
-        </div>
-          <select class="drop-down py-3" name="Availablity">
-           <option value="Availablity">Availablity</option>
-            <option value="Dates">Insert dates</option>
-            </select>
-          </div>
-
+        <h1>List your property</h1>
+        
+          <%= simple_form_for @planet do |f| %>
+            <%= f.input :title, label: false, placeholder: 'Planet name'%>
+            <%= f.input :host_name, label: false, placeholder: 'Host name' %>
+            
+          
+          <%= f.input :name_of_inhabitants, label: false, placeholder: "name of inhabitants"  %>
+          <%= f.input :name_of_space_station, label: false, placeholder: "name of space station"  %>
+          <%= f.input :name_of_galaxy, label: false, placeholder: "name of galaxy"  %>
           <%= f.input :price, label: false, placeholder: "Pricing $"  %>
           <%= f.input :description, placeholder: "Accomodation, activites, atmosphere, climate etc.", class: "pt-8"  %>
-
-
-
-  <%= f.input :price, label: false, placeholder: "Pricing $"  %>
-  </div>
-  <%= f.input :photos, as: :file, input_html: { multiple: true }, hint: "Please upload at least 4 photos" %>
+          
+        
+        <%= f.input :photos, as: :file, input_html: { multiple: true }, hint: "Please upload at least 4 photos" %>
+         <p>By clicking 'Publish' you are agreeing to our Terms & Conditions, Privacy Policy, and to received booking-related messages.</p>
+        <%= f.button :button, "Publish", class: "button" %>
+        <% end %>
+      </div>
+    </div> 
   
-
-
-
   </div>
-
-
-
-<p>By clicking 'Publish' you are agreeing to our Terms & Conditions, Privacy Policy, and to received booking-related messages.</p>
-
-<%= f.button :button, "Publish", class: "button" %>
-
-
-<% end %>
 </div>

@@ -10,9 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-
-ActiveRecord::Schema.define(version: 2021_05_03_212355) do
-
+ActiveRecord::Schema.define(version: 2021_05_05_202647) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -54,6 +52,7 @@ ActiveRecord::Schema.define(version: 2021_05_03_212355) do
     t.string "phone_number"
     t.integer "credit_card"
     t.text "message"
+    t.string "credit_card_expiration_date"
     t.index ["planet_id"], name: "index_bookings_on_planet_id"
     t.index ["user_id"], name: "index_bookings_on_user_id"
   end

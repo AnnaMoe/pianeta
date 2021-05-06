@@ -18,6 +18,7 @@ class BookingsController < ApplicationController
   end
 
   def edit
+    @planet = Planet.find(params[:planet_id])
     @booking =Booking.find(params[:id])
   end
 

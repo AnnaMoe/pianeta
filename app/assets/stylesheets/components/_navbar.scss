@@ -18,6 +18,8 @@
       color:#B921FA;
       border-color:rgba(185, 33, 250, 0.67);
       border-radius: 50px;
+      //padding: 10px 20px;
+      //margin-right: 10px;
       padding-left:5px;
       padding-right:5px;
       background-color: #fff;
@@ -38,9 +40,11 @@
     }
     
     .btn-outline-primary:hover{
-        color:#B921FA ;
+        color:#43025f ;
         background-color:#fff;
-        border-color:#B921FA;
+        border-color:#43025f;
+        border-width: 2px;
+        font-weight: bold;
         
     }
 

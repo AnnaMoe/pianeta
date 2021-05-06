@@ -1,5 +1,5 @@
 <div class="navbar navbar-expand-sm navbar-light navbar-lewagon">
-  <%= link_to "https://pianeta.herokuapp.com/", class: "navbar-brand" do %>
+  <%= link_to root_path, class: "navbar-brand" do %>
     <p class="navbar-logo"><i class="fas fa-meteor"></i> PIANETA</p>
     <% end %>
 
@@ -11,8 +11,10 @@
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
       <% if user_signed_in? %>
-        <button class="btn-outline-primary-1 shadow-none focus-none" type="button"><%= link_to " List your planet", new_planet_path, class: "btn-outline-primary shadow-none focus-none text-decoration-none", type: "button" %></button>
-        <button class="btn-outline-primary shadow-none focus-none" type="button"><%= link_to "My Listings", planets_path, class: "btn-outline-primary shadow-none focus-none text-decoration-none", type: "button"%></button>
+
+        <%= link_to "List your planet", new_planet_path, class: "btn btn-outline-primary-1 shadow-none focus-none text-decoration-none", type: "button", role: "button" %>
+        <%= link_to "My lists", planets_path, class: "btn btn-outline-primary shadow-none focus-none text-decoration-none", type: "button", role: "button" %>
+
 
 
         <li class="nav-item dropdown">

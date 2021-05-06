@@ -1,60 +1,56 @@
 <div class="m-5">
   <div class="pictures d-flex align-center">
     <% if @planet.photos.attached? %>
-
-     
-      <%# <%= cl_image_tag @planet.photos.first, class: "cover-picture" %>
-      <%# <%= cl_image_tag @planet.photos.second, class: "top-middle-picture" %> 
-      <%# <%= cl_image_tag @planet.photos.third, class: "bottom-middle-picture" %> 
-      <%# <%= cl_image_tag @planet.photos.fourth, class: "top-outer-picture" %> 
-      <%# <%= cl_image_tag @planet.photos.last, class: "bottom-outer-picture" %> 
-    <div class="row">
-      <% @planet.photos.each do |photo| %>
-         
-          <%= cl_image_tag photo.key, class: "upload-picture"  %>
-            <% end %>
-          
-    </div>  
-     
-     
-    <% else %>
-      <div><%= cl_image_tag("vyec3bstcglbkdovu9bq",
-        class: "cover-picture") %></div>
-      <div class="gallery">
-        <%= cl_image_tag("oioedmdm4itsccdmasip",
-        class: "top-middle-picture") %>
-        <%= cl_image_tag("zkoh2ddnvj524vpcoww4",
-        class: "bottom-middle-picture") %>
-      </div>
-      <div class="gallery">
-        <%= cl_image_tag("pjgz89hkowv5p3g1nrkg",
-        class: "top-outer-picture") %>
-        <%= cl_image_tag("xsbma6usy4k1h0da1iyv",
-        class: "bottom-outer-picture") %>
-      </div>
-    <% end %>
-  </div>
-  <div class="container">
-    <div class="row d-flex mt-4">
-      <div class="col-md-8 flex-grow-1">
-        <div class="header">
-          <div class="header-content">
-            <b>
-              <h3><%= @planet.title %></h3>
-            </b>
-            <p><i class="fab fa-reddit-alien"></i> Name of Inhabitants <i class="fas fa-rocket ml-3"></i> Name of Space Station</p>
-            <p><i class="fas fa-star"></i> Name of Galaxy</p>
-          </div>
-          <div class="header-avatar">
-            <%= cl_image_tag("wxaoh8vb1ekhhuhkkwbd", class: "avatar") %>
-            <p> <small><em class="text-muted">Hosted by <br>
-                  <%= @planet.host_name %></em></small></p>
-          </div>
+      <div class="container">
+        <div class="row d-flex justify-content-between">
+          <% @planet.photos.each do |photo| %>
+            <%= cl_image_tag photo.key, class: "upload-picture"  %>
+          <% end %>
         </div>
-        <hr>
-        <p>Description:</p>
-        <p><%= @planet.description %></p>
       </div>
-      <div class="col-md-4">
-        <%= render "bookings/form", booking: @booking %>
+    </div>
+  <% else %>
+  <div class="d-flex">
+  </div>
+    <div><%= cl_image_tag("pianeta_gal_five-min_wcoekf",
+        class: "cover-picture") %></div>
+    <div class="gallery">
+      <%= cl_image_tag("eutah-mizushima-OWwK_0_EnxY-unsplash-min_nexgr9",
+        class: "top-middle-picture") %>
+      <%= cl_image_tag("pianeta_gal_tre-min_z9qlvh",
+        class: "bottom-middle-picture") %>
+    </div>
+    <div class="gallery">
+      <%= cl_image_tag("pianeta_gal_six-min_xefqm7",
+        class: "top-outer-picture") %>
+      <%= cl_image_tag("pianeta_gal_four-min_em4rmc",
+        class: "bottom-outer-picture") %>
+    </div>
+  <% end %>
+</div>
+<div class="container">
+  <div class="row d-flex mt-4">
+    <div class="col-md-8 flex-grow-1">
+      <div class="header">
+        <div class="header-content">
+          <b>
+            <h3><%= @planet.title %></h3>
+          </b>
+          <p><i class="fab fa-reddit-alien"></i> inhabitants: <%=@planet.name_of_inhabitants  %> <i class="fas fa-rocket ml-3"></i> space station: <%= @planet.name_of_space_station %></p>
+          <p><i class="fas fa-star"></i> galaxy: <%= @planet.name_of_galaxy %></p>
+        </div>
+        <div class="header-avatar">
+          <%= cl_image_tag("wxaoh8vb1ekhhuhkkwbd", class: "avatar") %>
+          <p> <small><em class="text-muted">Hosted by <br>
+                <%= @planet.host_name %></em></small></p>
+        </div>
       </div>
+      <hr>
+      <p>Description:</p>
+      <p><%= @planet.description %></p>
+    </div>
+    <div class="col-md-4">
+      <%= render "bookings/form", booking: @booking %>
+    </div>
+  </div>
+</div>
