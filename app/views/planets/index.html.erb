@@ -50,20 +50,32 @@
  
     <div class="row">
       <% @planets.each do |planet| %>
-        
-        <%# <div class="col-12 col-sm-6 col-md-4 my-3"> %>
-        <div class="cards">
-          <%= link_to planet_path(planet), class:'text-decoration-none'  do %>
-            <div class="card-category-planets" >
-              <%= cl_image_tag("agyy55i31hpsqwmkb775") %>
-              <div class="card-planets-body">
-                <h3 class="card-planet-title"><%= planet.title %></h3>
-                
-                <p class="card-planet-description"><%=planet.price%>$</p>
+        <% if planet.photos.attached? %>
+            <%= link_to planet_path(planet), class:'text-decoration-none' do %>
+              <div class="card-category-planets">
+                <%= cl_image_tag planet.photos.first.key %>
+                <div class="card-planets-body">
+                  <h3 class="card-planet-title"><%= planet.title %></h3>
+                  <p class="card-planet-description"><%=planet.price%>$</p>
+                </div>
               </div>
-            </div>
-          <% end %>
-        </div>
+            <% end %>
+          </div>
+        <% else %>
+        <%# <div class="col-12 col-sm-6 col-md-4 my-3"> %>
+          <div class="cards">
+            <%= link_to planet_path(planet), class:'text-decoration-none'  do %>
+              <div class="card-category-planets" >
+                <%= cl_image_tag("agyy55i31hpsqwmkb775") %>
+                <div class="card-planets-body">
+                  <h3 class="card-planet-title"><%= planet.title %></h3>
+                  
+                  <p class="card-planet-description"><%=planet.price%>$</p>
+                </div>
+              </div>
+            <% end %>
+          </div>
+        <% end %>
       <% end %>
     </div>
   </div>
