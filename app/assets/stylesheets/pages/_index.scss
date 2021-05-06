@@ -3,15 +3,9 @@
 @import "show";
 
 body {
-  background-color: white;
   padding-bottom: 10px;
 }
 
-.banner {
-  padding: 10px;
-  overflow: hidden;
-  background: linear-gradient(180deg, rgba(143, 39, 187, 0.94) 22.72%, rgba(15, 237, 252, 0.94) 119.28%);
-}
 
 .glow-header {
   color: white;
@@ -26,7 +20,8 @@ body {
   top: 135px;
   bottom: 10px;
   left: 171px;
-  text-shadow: 0 0 30px #fff, 0 0 5px #b921fa, 0 0 15px #b921fa, 0 0 30px #b921fa;
+  text-shadow: 0 0 30px #fff, 0 0 5px #2A003C, 0 0 15px #2A003C, 0 0 30px #2A003C;
+ 
 }
 
 .planets h2 {
