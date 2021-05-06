@@ -3,7 +3,11 @@ class PlanetsController < ApplicationController
   before_action :set_planet, only: [:show]
 
   def index
-     @planets = Planet.all
+    if params[:query].present?
+      @planets = Planet.search_by_title_and_description(params[:query])
+    else
+      @planets = Planet.all
+    end
   end
 
   def show
@@ -28,7 +32,7 @@ class PlanetsController < ApplicationController
 
   def planet_params
     params.require(:planet).permit(:price, :title, :description, :name_of_inhabitants,
-      :name_of_space_station, :name_of_galaxy, photos: [])
+      :name_of_space_station, :name_of_galaxy, :host_name, photos: [])
   end
 
 end
