@@ -18,6 +18,7 @@
 }
 .cover-picture {
   background-image: asset-url('houses_in_forest');
+  object-fit: cover;
   background-size: cover;
   height:417px;
   width: 600px;
@@ -26,6 +27,7 @@
 
 .top-middle-picture {
   background-image: asset-url('river');
+  object-fit: cover;
   background-size: cover;
   object-position: center;
   height: 200px;
@@ -36,6 +38,7 @@
 
 .bottom-middle-picture{
   background-image: asset-url('river');
+  object-fit: cover;
   background-size: cover;
   object-position: center;
   height: 200px;
