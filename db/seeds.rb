@@ -35,7 +35,7 @@ test_user = User.create(id: 1, email: "anna@planet.de", password: "foobar")
 images = ['houses.png', 'treehouses.png', 'iglus.png', 'waterfall.png', 'path.png', 'river.png', 'waterfall2.png', 'lake.jpg', 'tree.jpg', 'night-sky.jpg', 'desert.jpg']
 
 # create random planets
-9.times do |i|
+8.times do |i|
   puts "user #{test_user}"
   p = create_planet(test_user, Faker::Lorem.paragraph)
 
