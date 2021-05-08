@@ -60,20 +60,18 @@
   }
 
   .footer {
-    background: linear-gradient(180deg, rgba(23, 127, 212, 0.94) 22.72%, rgba(143, 39, 187, 0.94) 119.28%,);
+    background: #D9ABED;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    height: 115px;
-    width: 100%;
+    height: 100px;
     padding: 0px 50px;
     color: white;
   }
   .footer-links {
     display: flex;
     align-items: center;
-    color:white;
-    opacity: 0,5;
+    color: white;
   }
   .footer-links a {
     color: white;
@@ -85,4 +83,3 @@
   .footer-links a:hover {
     opacity: 1;
   }
-
