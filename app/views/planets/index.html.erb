@@ -1,60 +1,58 @@
-  
 <div class="banner">
   <h1 class="glow-header">Galaxy Far, Far Away? Quick Trip to Mars?<br>
     Pianeta has you covered.</h1>
   <div>
-    <div class="inner-form"> 
-    <div class="row">
-        <div class="col">
-          <%= form_tag planets_path, method: :get do %>
+    <div class="inner-form">
+      <%= form_tag planets_path, method: :get do %>
+        <div class="row">
+          <div class="col">
             <%= text_field_tag :query,
-            params[:query],
-            class: "form-control",
-            placeholder: "Find a planet",
-            type: "text"  
-          %>
+                params[:query],
+                class: "form-control",
+                placeholder: "Find a planet",
+                type: "text"  
+              %>
           </div>
-        <div class="col">
-          <input type="text" class="form-control" placeholder="Check-in">
-        </div>
-        <div class="col">
-          <input type="text" class="form-control" placeholder="Check-out">
-        </div>
-        <div class="col">
-          <input type="text" class="form-control" placeholder="Space Travellers">
-        </div>
-          <div class="col">            
-            <%= submit_tag "Search", class: "btn btn-flat" %>
+          <div class="col">
+            <input type="text" class="form-control" placeholder="Check-in">
           </div>
-        <% end %>
+          <div class="col">
+            <input type="text" class="form-control" placeholder="Check-out">
+          </div>
+          <div class="col">
+            <input type="text" class="form-control" placeholder="Space Travellers">
+          </div>
+          <div class="col">
+            <%= submit_tag "Search", class: "btn btn-flat"%>
+          </div>
+        </div>
       </div>
-    </div>
+    <% end %>
   </div>
 </div>
 </div>
 <br>
-
 <div class= "container-sm">
-<h2>Featured Planets:</h2>
+  <h2>Featured Planets:</h2>
 </div>
 <br>
 <div class= "container">
- <div class="row ">
- <%# <div class="col"> %>
-  <% @planets.each do |planet| %>
-    <% if planet.photos.attached? %>
-      <%= link_to planet_path(planet), class:'text-decoration-none' do %>
-        <div class="card-category-planets">
-          <%= cl_image_tag planet.photos.first.key, class: 'planet-images' %>
-          <div class="card-planets-body">
-            <h3 class="card-planet-title"><%= planet.title %></h3>
-            <p class="card-planet-description">$<%=planet.price%>/ per night</p>
-      <% end %>       
-    </div>
-    </div>
-  <% end %>
-<% end %>
-</div>
+  <div class="row ">
+    <%# <div class="col"> %>
+    <% @planets.each do |planet| %>
+      <% if planet.photos.attached? %>
+        <%= link_to planet_path(planet), class:'text-decoration-none' do %>
+          <div class="card-category-planets">
+            <%= cl_image_tag planet.photos.first.key, class: 'planet-images' %>
+            <div class="card-planets-body">
+              <h3 class="card-planet-title"><%= planet.title %></h3>
+              <p class="card-planet-description">$<%=planet.price%>/ per night</p>
+            <% end %>
+          </div>
+        </div>
+      <% end %>
+    <% end %>
+  </div>
 </div>
 <div class="footer">
   <div class="footer-links">
