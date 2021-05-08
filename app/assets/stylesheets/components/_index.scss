@@ -28,7 +28,10 @@
   outline: none !important;
   box-shadow: 0 2px 6px rgba(0,0,0,0.08);
   }
-
+  .form-control:disabled, .form-control[readonly] {
+    background-color: #ffffff;
+    opacity: 1;
+}
   input.form-control{
   height: 3.5rem;
   box-shadow: 0 2px 6px rgba(0,0,0,0.08);
