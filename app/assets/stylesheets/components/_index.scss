@@ -8,6 +8,8 @@
 
 
 
+
+
   .btn-flat {
   position: relative;
   left: 90px;
@@ -56,6 +58,7 @@
       width: 1080px;
       margin-left: 178px;
       margin-top: 155px;
+      
   }
 
   .footer {
@@ -82,3 +85,15 @@
   .footer-links a:hover {
     opacity: 1;
   }
+
+  textarea {
+    border: none;
+    overflow: auto;
+    outline: none;
+
+    -webkit-box-shadow: none !important;
+    -moz-box-shadow: none;
+    box-shadow: none;
+
+    resize: none; /*remove the resize handle on the bottom right*/
+}
