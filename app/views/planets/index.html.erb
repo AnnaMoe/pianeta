@@ -37,13 +37,14 @@
 </div>
 </div>
 <br>
+
 <div class= "container-sm">
 <h2>Featured Planets:</h2>
 </div>
 <br>
-
- <div class="row align-items-center ">
- <div class="col">
+<div class= "container">
+ <div class="row ">
+ <%# <div class="col"> %>
   <% @planets.each do |planet| %>
     <% if planet.photos.attached? %>
       <%= link_to planet_path(planet), class:'text-decoration-none' do %>
@@ -58,19 +59,5 @@
   <% end %>
 <% end %>
 </div>
-<%# </div>
 </div>
-</div> %>
 
-<%# //<% else %>
-    <%# <div class="col-12 col-sm-6 col-md-4 my-3"> %>
-    <%# <div class="cards"> %>
-      <%# <%= link_to planet_path(planet), class:'text-decoration-none'  do %>
-        <%# <div class="card-category-planets" >
-          <%= cl_image_tag("agyy55i31hpsqwmkb775") %>
-          <%# <div class="card-planets-body">
-            <%# <h3 class="card-planet-title"><%= planet.title %></h3>
-            <%# <p class="card-planet-description"><%=planet.price$</p> %>
-          <%# </div> %>
-        <%# </div> %> 
-      <%# <% end %> 
