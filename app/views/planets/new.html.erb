@@ -17,8 +17,11 @@
           <%= f.input :description, placeholder: "Accomodation, activites, atmosphere, climate etc.", class: "pt-8"  %>
           
         
-        <%= f.input :photos, as: :file, input_html: { multiple: true }, hint: "Please upload at least 4 photos" %>
-         <p>By clicking 'Publish' you are agreeing to our Terms & Conditions, Privacy Policy, and to received booking-related messages.</p>
+        <%= f.input :photos, as: :file, input_html: { multiple: true }, hint: "Please upload 5 photos" %>
+         <p><small><em class="text-muted">By clicking 
+         <strong>'Publish'  </strong> 
+          you are agreeing to our Terms & Conditions, Privacy Policy, and to received booking-related messages.</em></small>
+         </p>
         <%= f.button :button, "Publish", class: "button" %>
         <% end %>
       </div>
