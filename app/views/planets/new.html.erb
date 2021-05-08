@@ -33,9 +33,9 @@
           
         
         <%= f.input :photos, as: :file, input_html: { multiple: true }, hint: "Please upload 5 photos" %>
-         <p><small><em class="text-muted">By clicking 
+         <p class="text-muted">By clicking 
          <strong>'Publish'  </strong> 
-          you are agreeing to our Terms & Conditions, Privacy Policy, and to received booking-related messages.</em></small>
+          you are agreeing to our Terms & Conditions, Privacy Policy, and to received booking-related messages.
          </p>
         <%= f.button :button, "Publish", class: "button" %>
         <% end %>
