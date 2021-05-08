@@ -3,19 +3,8 @@
   <h1 class="glow-header">Galaxy Far, Far Away? Quick Trip to Mars?<br>
     Pianeta has you covered.</h1>
   <div>
-    <div class="inner-form">
-      <div class="row">
-      </div>
-      <div class="row">
-        <div class="col">
-          <input type="text" class="form-control" placeholder="Check-in">
-        </div>
-        <div class="col">
-          <input type="text" class="form-control" placeholder="Check-out">
-        </div>
-        <div class="col">
-          <input type="text" class="form-control" placeholder="Space Travellers">
-        </div>
+    <div class="inner-form"> 
+    <div class="row">
         <div class="col">
           <%= form_tag planets_path, method: :get do %>
             <%= text_field_tag :query,
@@ -25,6 +14,15 @@
             type: "text"  
           %>
           </div>
+        <div class="col">
+          <input type="text" class="form-control" placeholder="Check-in">
+        </div>
+        <div class="col">
+          <input type="text" class="form-control" placeholder="Check-out">
+        </div>
+        <div class="col">
+          <input type="text" class="form-control" placeholder="Space Travellers">
+        </div>
           <div class="col">
             <%=  button_tag "Search", type: 'submit', class:  "btn btn-flat" do %>
             <i class="fas fa-search"></i> Search
