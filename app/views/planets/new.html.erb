@@ -1,20 +1,35 @@
 <div class="container py-5">
-  
   <div class="row">
-    <div class="col-12 col-md-6">
-      <div class="bg-white rounded p-3 shadow">
+    <div class="col-12 col-md-6 offset-md-3">
+      <div class="bg-white rounded p-3 shadow confirmation mt-3 mb-3">
         <h1>List your property</h1>
         
           <%= simple_form_for @planet do |f| %>
-            <%= f.input :title, label: false, placeholder: 'Planet name'%>
-            <%= f.input :host_name, label: false, placeholder: 'Host name' %>
-            
-          
-          <%= f.input :name_of_inhabitants, label: false, placeholder: "name of inhabitants"  %>
-          <%= f.input :name_of_space_station, label: false, placeholder: "name of space station"  %>
-          <%= f.input :name_of_galaxy, label: false, placeholder: "name of galaxy"  %>
-          <%= f.input :price, label: false, placeholder: "Pricing $"  %>
-          <%= f.input :description, placeholder: "Accomodation, activites, atmosphere, climate etc.", class: "pt-8"  %>
+          <div class="form-row">
+            <div class="form-group col-md-6">
+            <%= f.input :title, label: false, placeholder: 'Planet Name'%>
+            </div>
+            <div class="form-group col-md-6">
+            <%= f.input :host_name, label: false, placeholder: 'Host Name' %>
+            </div>
+            </div>
+            <div class="form-row">
+            <div class="form-group col-md-6">
+            <%= f.input :name_of_inhabitants, label: false, placeholder: "Name of Inhabitants"  %>
+            </div>
+            <div class="form-group col-md-6">
+            <%= f.input :name_of_space_station, label: false, placeholder: "Name of Space Station"  %>
+            </div>
+            </div>
+            <div class="form-row">
+            <div class="form-group col-md-6">
+            <%= f.input :name_of_galaxy, label: false, placeholder: "Name of Galaxy"  %>
+            </div>
+            <div class="form-group col-md-6">
+            <%= f.input :price, label: false, placeholder: "Pricing $"  %>
+            </div>
+            </div>
+            <%= f.input :description, as: :text, label: "Description", placeholder: "Accomodation, activites, atmosphere, climate etc.",  :input_html => { :cols => 3, :rows => 5} %>
           
         
         <%= f.input :photos, as: :file, input_html: { multiple: true }, hint: "Please upload 5 photos" %>

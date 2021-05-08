@@ -45,6 +45,15 @@ body {
     top: 360px;
     position: absolute;
 }
+
+.card-description{
+    height: 112px;
+    width: 600px;
+    left: 425px;
+    top: 485px;
+    position: absolute;
+
+}
 .white-line{
     left: 527px;
     border: 4px dashed #FFFFFF;
@@ -73,11 +82,11 @@ p.homepage {
     text-align: center;
     color: #FFFFFF;
 }
-.btn-blue{
+.card-description .btn-blue{
     width: 140px;
     height: 44px;
     left: 650px;
-    top: 610px;
+    top: 640px;
     background: #2A003C;
     padding: 6px;
     border-radius: 10px;
