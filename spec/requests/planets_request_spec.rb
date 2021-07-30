@@ -2,8 +2,7 @@ require 'rails_helper'
 
 RSpec.describe 'planets requests' do
   describe 'GET /planets' do
-    it 'returns an array of planet titles' do
-      test_user = User.create(id: 1, email: "anna@planet.de", password: "foobar")
+    test_user = User.create(id: 1, email: "anna@planet.de", password: "foobar")
 
       Planet.create!(
         user: test_user,
@@ -15,7 +14,15 @@ RSpec.describe 'planets requests' do
         host_name: Faker::TvShows::Stargate.character,
         description: "Longing for a planet with exotic nature and stunning waterfalls? This is the right place for you if you want to get a break from your busy urban lifestyle. There are more trees than inhabitants. Here you are really connected to the nature as you'd live in treehouses and listen to the flow of water whereever you are. It just doesn't feel, like another planet, IT IS another planet."
       )
+    it 'returns an array of planet titles' do
+      
       get('/planets')
+      json = JSON.parse(response.body)
+      expect(json['planets']).to include('Jedha')
+    end
+
+    it 'supports specifying planets for a specific title' do
+      get('/planets', params: {title: 'Jedha'})
       json = JSON.parse(response.body)
       expect(json['planets']).to include('Jedha')
     end
