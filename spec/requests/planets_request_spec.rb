@@ -1,6 +1,7 @@
 require 'rails_helper'
 
 RSpec.describe 'planets requests' do
+  let(:response_json) { JSON.parse(response.body) }
   describe 'GET /planets' do
     test_user = User.create(id: 1, email: "anna@planet.de", password: "foobar")
 
@@ -17,14 +18,13 @@ RSpec.describe 'planets requests' do
     it 'returns an array of planet titles' do
       
       get('/planets')
-      json = JSON.parse(response.body)
-      expect(json['planets']).to include('Jedha')
+      
+      expect(response_json['planets']).to include('Jedha')
     end
 
     it 'supports specifying planets for a specific title' do
       get('/planets', params: {title: 'Jedha'})
-      json = JSON.parse(response.body)
-      expect(json['planets']).to include('Jedha')
+      expect(response_json['planets']).to include('Jedha')
     end
   end
 end

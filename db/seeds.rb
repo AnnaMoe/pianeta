@@ -45,6 +45,17 @@ images = ['houses.png', 'treehouses.png', 'iglus.png', 'waterfall.png', 'path.pn
   end
 end
 
+jedha = Planet.create(
+    user: test_user,
+    price: rand(100..500),
+    name_of_space_station: Faker::TvShows::StarTrek.location,
+    name_of_inhabitants: Faker::TvShows::StarTrek.specie,
+    name_of_galaxy: Faker::Space.galaxy,
+    title: 'Jedha',
+    host_name: Faker::TvShows::Stargate.character,
+    description: "Longing for a planet with exotic nature and stunning waterfalls? This is the right place for you if you want to get a break from your busy urban lifestyle. There are more trees than inhabitants. Here you are really connected to the nature as you'd live in treehouses and listen to the flow of water whereever you are. It just doesn't feel, like another planet, IT IS another planet."
+  )
+
 # create pre-defined content
 p1_description = "Longing for a planet with exotic nature and stunning waterfalls? This is the right place for you if you want to get a break from your busy urban lifestyle. There are more trees than inhabitants. Here you are really connected to the nature as you'd live in treehouses and listen to the flow of water whereever you are. It just doesn't feel, like another planet, IT IS another planet."
 p_unique_images = ['treehouses.png', 'river.png', 'waterfall2.png', 'tree.jpg', 'lake.jpg']

@@ -8,6 +8,11 @@ class PlanetsController < ApplicationController
     else
       @planets = Planet.all
     end
+    # planets = [ 
+    #   'NES',
+    #   'Jedha'
+    # ]
+    render(json: { 'planets' => @planets.map(&:title) })
   end
 
   def show
