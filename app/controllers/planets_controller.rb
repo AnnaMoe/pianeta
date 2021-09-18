@@ -21,8 +21,13 @@ class PlanetsController < ApplicationController
   def create
     @planet = Planet.new(planet_params)
     @planet.user = current_user
-    @planet.save!
-    redirect_to planet_path(@planet)
+    if @planet.save
+      flash[:notice] = "Planet has been created"
+      redirect_to planet_path(@planet)
+    else
+      flash[:alert] = "Planet has not been created"
+      render "new"
+    end
   end
 
   private
