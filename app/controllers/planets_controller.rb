@@ -12,7 +12,7 @@ class PlanetsController < ApplicationController
     #   'NES',
     #   'Jedha'
     # ]
-    render(json: { 'planets' => @planets.map(&:title) })
+    #render(json: { 'planets' => @planets.map(&:title) })
   end
 
   def show
