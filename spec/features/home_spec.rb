@@ -7,8 +7,11 @@ RSpec.describe 'home features' do
     # have this specific text in the html
     expect(page).to have_content('Space is full of surprises.')
     click_link('Go Beyond')
-    expect(current_path).to eq('/planets')
-    expect(page).to have_content('Galaxy Far, Far Away?')
+    expect(page).to have_current_path('/planets')
+    # page.within('h1.glow-header') do
+    #   expect(page).to have_content('Galaxy Far, Far Away?')
+    # end
+    expect(page).to have_css('h1.glow-header', text: 'Galaxy Far, Far Away?')
 
   end
 end
