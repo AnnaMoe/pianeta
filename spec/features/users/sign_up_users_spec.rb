@@ -7,7 +7,7 @@ RSpec.describe "user signup" do
     click_link "Login"
     click_link "Sign up"
     fill_in "Email", with: "vitor@web.br"
-    fill_in "Password", with: "123456"
+    fill_in "user_password", with: "123456"
     fill_in "Password confirmation", with: "123456"
     click_button "Sign up"
     expect(page).to have_content("You have signed up successfully.")
@@ -21,7 +21,7 @@ RSpec.describe "user signup" do
     click_link "Login"
     click_link "Sign up"
     fill_in "Email", with: ""
-    fill_in "Password",  with: ""
+    fill_in "user_password",  with: ""
     fill_in "Password confirmation",  with: ""
     click_button "Sign up"
 
