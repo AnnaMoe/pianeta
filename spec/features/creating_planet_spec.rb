@@ -8,15 +8,18 @@ RSpec.describe 'creating planet' do
 
     click_link "Go Beyond"
     click_link "List your planet"
+
   end
 
   scenario "with valid inputs" do
+    expect(current_path).to have_content('/planets/new')
     fill_in "Planet Name", with: "moon"
     fill_in "Host Name", with: "Sara"
     fill_in "Pricing $", with: "1000"
     fill_in "Description", with: "Let's fly to the moon"
     click_button "Publish"
 
+    expect(current_path).to have_content('/planets')
     expect(page).to have_content("Planet has been created")
     planet = Planet.last
     expect(current_path).to eq(planet_path(planet))
